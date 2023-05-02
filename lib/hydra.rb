@@ -5,12 +5,12 @@ class Hydra
   def initialize(name, color)
     @name = name
     @color = color
-    heads = [Head.new]
+    @heads = [Head.new(@color.to_s)]
   end
 
   def regenerate(head)
     head.magicalness = true
-    @heads.push(head)
+    @heads.unshift(head)
   end
 
   def head_info

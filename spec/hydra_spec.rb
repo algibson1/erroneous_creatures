@@ -38,7 +38,7 @@ RSpec.describe Hydra do
 
     hydra.regenerate(head)
 
-    expect(hydra.heads.count).to eq(1)
+    expect(hydra.heads.count).to eq(2)
     expect(hydra.heads.first.color).to eq("fuschia")
   end
 
@@ -50,7 +50,7 @@ RSpec.describe Hydra do
 
   it "head is magical when collected" do
     hydra = Hydra.new("jane", :magenta)
-    rock = Head.new("fuschia")
+    head = Head.new("fuschia")
 
     hydra.regenerate(head)
 
